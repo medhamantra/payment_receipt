@@ -1,0 +1,20 @@
+{
+  "courses": [
+    {
+      "id": "C001",
+      "name": "SSC CGL",
+      "duration": "12 Months",
+      "admissionFee": 500,
+      "registrationFee": 300,
+      "monthlyFee": 1000
+    },
+    {
+      "id": "C002",
+      "name": "SSC CHSL",
+      "duration": "10 Months",
+      "admissionFee": 500,
+      "registrationFee": 300,
+      "monthlyFee": 900
+    }
+  ]
+}
