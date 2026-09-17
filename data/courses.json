@@ -1,20 +1,64 @@
-{
-  "courses": [
-    {
-      "id": "C001",
-      "name": "SSC CGL",
-      "duration": "12 Months",
-      "admissionFee": 500,
-      "registrationFee": 300,
-      "monthlyFee": 1000
-    },
-    {
-      "id": "C002",
-      "name": "SSC CHSL",
-      "duration": "10 Months",
-      "admissionFee": 500,
-      "registrationFee": 300,
-      "monthlyFee": 900
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Class XII Science Integrated",
+    "duration": "1 Year",
+    "totalFee": 85000,
+    "components": [
+      { "name": "Admission Fee", "amount": 15000 },
+      { "name": "Annual Tuition", "amount": 60000 },
+      { "name": "Lab & Library", "amount": 10000 }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "NEET UG Dropper Batch",
+    "duration": "10 Months",
+    "totalFee": 65000,
+    "components": [
+      { "name": "Registration", "amount": 5000 },
+      { "name": "Course Fee", "amount": 55000 },
+      { "name": "Study Material", "amount": 5000 }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "JEE Mains Crash Course",
+    "duration": "3 Months",
+    "totalFee": 25000,
+    "components": [
+      { "name": "Full Course Fee", "amount": 25000 }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Foundation Batch (Class IX)",
+    "duration": "1 Year",
+    "totalFee": 40000,
+    "components": [
+      { "name": "Tuition Fee", "amount": 35000 },
+      { "name": "Materials", "amount": 5000 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Spoken English Advanced",
+    "duration": "6 Months",
+    "totalFee": 12000,
+    "components": [
+      { "name": "Course Fee", "amount": 10000 },
+      { "name": "Books", "amount": 2000 }
+    ]
+  },
+  {
+    "id": 999,
+    "name": "",
+    "totalFee": 5000,
+    "components": []
+  },
+  {
+    "id": 998,
+    "name": "Test Course (No Fee Set)",
+    "components": []
+  }
+]
