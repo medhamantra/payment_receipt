@@ -1,31 +1,46 @@
 {
   "courses": [
     {
-      "id": "C001",
-      "name": "SSC CGL",
+      "courseName": "SSC CGL",
       "duration": "12 Months",
-      "admissionFee": 5000,
+      "admissionFee": 1000,
       "registrationFee": 500,
-      "monthlyFee": 900,
-      "status": "active"
+      "monthlyFee": 800
     },
     {
-      "id": "C002",
-      "name": "SSC CHSL",
+      "courseName": "Banking",
       "duration": "10 Months",
-      "admissionFee": 4800,
+      "admissionFee": 1000,
+      "registrationFee": 500,
+      "monthlyFee": 900
+    },
+    {
+      "courseName": "UPSC CSE",
+      "duration": "12 Months",
+      "admissionFee": 2000,
+      "registrationFee": 1000,
+      "monthlyFee": 1500
+    },
+    {
+      "courseName": "Railways",
+      "duration": "8 Months",
+      "admissionFee": 800,
       "registrationFee": 400,
-      "monthlyFee": 850,
-      "status": "active"
+      "monthlyFee": 600
     },
     {
-      "id": "C003",
-      "name": "Railway NTPC",
+      "courseName": "State PSC",
       "duration": "10 Months",
-      "admissionFee": 5200,
-      "registrationFee": 450,
-      "monthlyFee": 950,
-      "status": "active"
+      "admissionFee": 1200,
+      "registrationFee": 600,
+      "monthlyFee": 750
+    },
+    {
+      "courseName": "CLAT",
+      "duration": "6 Months",
+      "admissionFee": 1500,
+      "registrationFee": 700,
+      "monthlyFee": 1000
     }
   ]
 }
