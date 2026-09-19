@@ -1,218 +1,31 @@
-[
-  {
-    "id": 1,
-    "name": "SSC CGL Complete Course",
-    "duration": "12 Months",
-    "totalFee": 18000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Course Fee", "amount": 14000 },
-      { "name": "Study Material & Test Series", "amount": 2000 }
-    ]
-  },
-  {
-    "id": 2,
-    "name": "SSC CHSL Complete Course",
-    "duration": "10 Months",
-    "totalFee": 15000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Course Fee", "amount": 11500 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 3,
-    "name": "SSC MTS Complete Course",
-    "duration": "8 Months",
-    "totalFee": 12000,
-    "components": [
-      { "name": "Admission Fee", "amount": 1500 },
-      { "name": "Course Fee", "amount": 9000 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 4,
-    "name": "SSC GD Constable Complete Course",
-    "duration": "8 Months",
-    "totalFee": 12000,
-    "components": [
-      { "name": "Admission Fee", "amount": 1500 },
-      { "name": "Course Fee", "amount": 9000 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Railway NTPC Complete Course",
-    "duration": "10 Months",
-    "totalFee": 15000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Course Fee", "amount": 11500 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 6,
-    "name": "Railway Group D Complete Course",
-    "duration": "8 Months",
-    "totalFee": 12000,
-    "components": [
-      { "name": "Admission Fee", "amount": 1500 },
-      { "name": "Course Fee", "amount": 9000 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 7,
-    "name": "Banking PO Complete Course",
-    "duration": "10 Months",
-    "totalFee": 18000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Course Fee", "amount": 14000 },
-      { "name": "Study Material & Test Series", "amount": 2000 }
-    ]
-  },
-  {
-    "id": 8,
-    "name": "Banking Clerk Complete Course",
-    "duration": "8 Months",
-    "totalFee": 15000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Course Fee", "amount": 11500 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 9,
-    "name": "WBCS Complete Course",
-    "duration": "18 Months",
-    "totalFee": 25000,
-    "components": [
-      { "name": "Admission Fee", "amount": 3000 },
-      { "name": "Course Fee", "amount": 20000 },
-      { "name": "Study Material & Test Series", "amount": 2000 }
-    ]
-  },
-  {
-    "id": 10,
-    "name": "West Bengal Police Complete Course",
-    "duration": "8 Months",
-    "totalFee": 12000,
-    "components": [
-      { "name": "Admission Fee", "amount": 1500 },
-      { "name": "Course Fee", "amount": 9000 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 11,
-    "name": "Primary TET Complete Course",
-    "duration": "10 Months",
-    "totalFee": 15000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Course Fee", "amount": 11500 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 12,
-    "name": "Upper Primary TET Complete Course",
-    "duration": "10 Months",
-    "totalFee": 16000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Course Fee", "amount": 12500 },
-      { "name": "Study Material & Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 13,
-    "name": "Competitive Maths Special Batch",
-    "duration": "6 Months",
-    "totalFee": 8000,
-    "components": [
-      { "name": "Admission Fee", "amount": 1000 },
-      { "name": "Course Fee", "amount": 6000 },
-      { "name": "Practice & Test Series", "amount": 1000 }
-    ]
-  },
-  {
-    "id": 14,
-    "name": "Competitive Reasoning Special Batch",
-    "duration": "6 Months",
-    "totalFee": 8000,
-    "components": [
-      { "name": "Admission Fee", "amount": 1000 },
-      { "name": "Course Fee", "amount": 6000 },
-      { "name": "Practice & Test Series", "amount": 1000 }
-    ]
-  },
-  {
-    "id": 15,
-    "name": "General Studies & Current Affairs",
-    "duration": "6 Months",
-    "totalFee": 7000,
-    "components": [
-      { "name": "Admission Fee", "amount": 1000 },
-      { "name": "Course Fee", "amount": 5000 },
-      { "name": "Monthly Current Affairs", "amount": 1000 }
-    ]
-  },
-  {
-    "id": 16,
-    "name": "SSC CGL Crash Course",
-    "duration": "3 Months",
-    "totalFee": 7500,
-    "components": [
-      { "name": "Full Course Fee", "amount": 6000 },
-      { "name": "Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 17,
-    "name": "SSC CHSL Crash Course",
-    "duration": "3 Months",
-    "totalFee": 6500,
-    "components": [
-      { "name": "Full Course Fee", "amount": 5000 },
-      { "name": "Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 18,
-    "name": "Railway NTPC Crash Course",
-    "duration": "3 Months",
-    "totalFee": 7000,
-    "components": [
-      { "name": "Full Course Fee", "amount": 5500 },
-      { "name": "Test Series", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 19,
-    "name": "All Competitive Exam Test Series",
-    "duration": "6 Months",
-    "totalFee": 5000,
-    "components": [
-      { "name": "Online Test Series", "amount": 3500 },
-      { "name": "Mock Tests & Analysis", "amount": 1500 }
-    ]
-  },
-  {
-    "id": 20,
-    "name": "Foundation Competitive Exam Batch",
-    "duration": "12 Months",
-    "totalFee": 20000,
-    "components": [
-      { "name": "Admission Fee", "amount": 2000 },
-      { "name": "Annual Course Fee", "amount": 16000 },
-      { "name": "Study Material & Test Series", "amount": 2000 }
-    ]
-  }
-]
+{
+  "courses": [
+    {
+      "id": "C001",
+      "name": "SSC CGL",
+      "duration": "12 Months",
+      "admissionFee": 5000,
+      "registrationFee": 500,
+      "monthlyFee": 900,
+      "status": "active"
+    },
+    {
+      "id": "C002",
+      "name": "SSC CHSL",
+      "duration": "10 Months",
+      "admissionFee": 4800,
+      "registrationFee": 400,
+      "monthlyFee": 850,
+      "status": "active"
+    },
+    {
+      "id": "C003",
+      "name": "Railway NTPC",
+      "duration": "10 Months",
+      "admissionFee": 5200,
+      "registrationFee": 450,
+      "monthlyFee": 950,
+      "status": "active"
+    }
+  ]
+}
