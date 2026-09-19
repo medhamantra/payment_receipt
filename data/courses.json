@@ -1,31 +1,6 @@
 {
   "courses": [
-    {
-      "id": "C001",
-      "name": "SSC CGL",
-      "duration": "12 Months",
-      "admissionFee": 5000,
-      "registrationFee": 500,
-      "monthlyFee": 900,
-      "status": "active"
-    },
-    {
-      "id": "C002",
-      "name": "SSC CHSL",
-      "duration": "10 Months",
-      "admissionFee": 4800,
-      "registrationFee": 400,
-      "monthlyFee": 850,
-      "status": "active"
-    },
-    {
-      "id": "C003",
-      "name": "Railway NTPC",
-      "duration": "10 Months",
-      "admissionFee": 5200,
-      "registrationFee": 450,
-      "monthlyFee": 950,
-      "status": "active"
-    }
+    { "id": "C001", "name": "SSC CGL",  "duration": "12 Months", "admissionFee": 5000, "registrationFee": 500, "monthlyFee": 900, "status": "active" },
+    { "id": "C002", "name": "SSC CHSL", "duration": "10 Months", "admissionFee": 4800, "registrationFee": 400, "monthlyFee": 850, "status": "active" }
   ]
 }
