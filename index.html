@@ -927,7 +927,145 @@ a:hover { text-decoration: underline; }
 }
 
 .notification-close:hover { opacity: 1; }
+/* =========================
+   STAFF LOGIN PAGE
+   ========================= */
 
+#loginScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(197,160,40,.18), transparent 35%),
+    linear-gradient(135deg, #0F5132, #083A24);
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 38px 34px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+  text-align: center;
+}
+
+.login-logo {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  border-radius: 14px;
+  margin-bottom: 15px;
+}
+
+.login-title {
+  color: #0F5132;
+  font-size: 1.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+
+.login-subtitle {
+  color: #7A8A82;
+  font-size: .9rem;
+  margin-bottom: 28px;
+}
+
+.login-form {
+  text-align: left;
+}
+
+.login-form .form-group {
+  margin-bottom: 17px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 7px;
+  font-size: .85rem;
+  font-weight: 700;
+  color: #4A5D52;
+}
+
+.login-input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1.5px solid #D1E0D7;
+  border-radius: 10px;
+  font-size: .95rem;
+  outline: none;
+  transition: .2s;
+}
+
+.login-input:focus {
+  border-color: #0F5132;
+  box-shadow: 0 0 0 3px rgba(15,81,50,.12);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #0F5132;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .2s;
+  margin-top: 5px;
+}
+
+.login-btn:hover {
+  background: #0D4528;
+  transform: translateY(-1px);
+}
+
+.login-error {
+  display: none;
+  margin-top: 14px;
+  padding: 10px;
+  background: #FFF5F5;
+  border: 1px solid #FED7D7;
+  border-radius: 8px;
+  color: #C53030;
+  font-size: .85rem;
+}
+
+.login-footer {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #E8EFEA;
+  color: #999;
+  font-size: .75rem;
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 22px;
+  }
+
+  .login-logo {
+    width: 75px;
+    height: 75px;
+  }
+}
+   .receipt-generated-by {
+  margin-top: 6px;
+  font-size: .75rem;
+  color: #777;
+}
+
+.receipt-generated-by strong {
+  color: #0F5132;
+  letter-spacing: .5px;
+}
 /* ============================================================
    LOADING INDICATOR
    ============================================================ */
@@ -989,10 +1127,71 @@ a:hover { text-decoration: underline; }
   .receipt-info-bar { flex-direction: column; gap: 4px; }
   .receipt-signatures { grid-template-columns: 1fr; gap: 30px; }
 }
+   
 </style>
 </head>
 <body>
+<!-- ================= LOGIN SCREEN ================= -->
+<div id="loginScreen">
 
+  <div class="login-card">
+
+    <img 
+      src="./logo.jpeg" 
+      alt="MEDHAMANTRA Logo" 
+      class="login-logo"
+      onerror="this.style.display='none';"
+    >
+
+    <h1>MEDHAMANTRA</h1>
+
+    <p class="login-subtitle">
+      Education Payment Receipt System
+    </p>
+
+    <form id="loginForm">
+
+      <div class="login-field">
+        <label for="staffId">Staff ID</label>
+        <input
+          type="text"
+          id="staffId"
+          placeholder="Enter Staff ID"
+          autocomplete="username"
+          required
+        >
+      </div>
+
+      <div class="login-field">
+        <label for="staffPassword">Password</label>
+        <input
+          type="password"
+          id="staffPassword"
+          placeholder="Enter Password"
+          autocomplete="current-password"
+          required
+        >
+      </div>
+
+      <button type="submit" class="login-btn">
+        🔐 Login
+      </button>
+
+      <div id="loginError" class="login-error">
+        Invalid Staff ID or Password.
+      </div>
+
+    </form>
+
+    <div class="login-footer">
+      Authorized Staff Only<br>
+      © MEDHAMANTRA
+    </div>
+
+  </div>
+
+</div>
+<!-- =============== END LOGIN SCREEN =============== -->
 <!-- ========================================================
      HEADER
      ======================================================== -->
@@ -1396,9 +1595,21 @@ a:hover { text-decoration: underline; }
 
           <!-- Footer -->
           <div class="receipt-footer">
-            <p><strong>MEDHAMANTRA</strong> — Education Payment Receipt</p>
-            <p class="receipt-footer-sub">This is a computer-generated receipt.</p>
-          </div>
+
+  <p>
+    <strong>MEDHAMANTRA</strong> — Education Payment Receipt
+  </p>
+
+  <p class="receipt-footer-sub">
+    This is a computer-generated receipt.
+  </p>
+
+  <p class="receipt-generated-by">
+    ID:
+    <strong id="preview-staff-id">—</strong>
+  </p>
+
+</div>
         </div>
       </div>
     </div>
@@ -1567,7 +1778,66 @@ const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxwkAjiA-TX_n
    }
 
    ============================================================ */
+/* =========================
+   STAFF LOGIN
+   ========================= */
 
+const STAFF_USERS = [
+  { id: "MM01", password: "MM@1001" },
+  { id: "MM02", password: "MM@1002" },
+  { id: "MM03", password: "MM@1003" },
+  { id: "MM04", password: "MM@1004" },
+  { id: "MM05", password: "MM@1005" },
+  { id: "MM06", password: "MM@1006" },
+  { id: "MM07", password: "MM@1007" },
+  { id: "MM08", password: "MM@1008" },
+  { id: "MM09", password: "MM@1009" },
+  { id: "MM10", password: "MM@1010" }
+];
+/* =========================
+   STAFF LOGIN HANDLER
+   ========================= */
+
+document.getElementById("loginForm").addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  const staffId = document
+    .getElementById("staffId")
+    .value
+    .trim()
+    .toUpperCase();
+
+  const password = document
+    .getElementById("staffPassword")
+    .value;
+
+  const staff = STAFF_USERS.find(
+    user => user.id === staffId && user.password === password
+  );
+
+  if (!staff) {
+    const error = document.getElementById("loginError");
+    error.style.display = "block";
+    return;
+  }
+
+  currentStaffId = staff.id;
+
+  // Hide login screen
+  document.getElementById("loginScreen").style.display = "none";
+
+  // Store current staff temporarily
+  sessionStorage.setItem("medhamantra_staff_id", staff.id);
+
+  // Update receipt staff ID
+  const staffPreview = document.getElementById("preview-staff-id");
+
+  if (staffPreview) {
+    staffPreview.textContent = staff.id;
+  }
+});
+let currentStaffId = null;
 /* ============================================================
    STATE MANAGEMENT
    ============================================================ */
