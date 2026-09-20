@@ -1007,6 +1007,7 @@ a:hover { text-decoration: underline; }
         <p>Education Payment Receipt System</p>
       </div>
     </div>
+      <button class="icon-btn" id="settingsToggle" aria-label="Open Settings" title="Settings">⚙</button>
   </div>
 </header>
 
@@ -1042,6 +1043,10 @@ a:hover { text-decoration: underline; }
 <!-- ========================================================
      CONFIG WARNING
      ======================================================== -->
+<div class="config-warning" id="configWarning" style="display:none;">
+  ⚠ <strong>Configuration Required:</strong> Google Apps Script URL is not configured. Payment data cannot be synced to Google Sheets until the Web App URL is added.
+  <button class="link-btn" id="configureNowBtn">Configure Now</button>
+</div>
 
 <!-- ========================================================
      TAB NAVIGATION
@@ -2612,6 +2617,17 @@ function toggleSettings() {
     document.getElementById('gasUrlInput').value = (url === GOOGLE_SCRIPT_URL) ? '' : url;
   }
 }
+function saveSettings() {
+  var url = document.getElementById('gasUrlInput').value.trim();
+  if (url && url !== GOOGLE_SCRIPT_URL) {
+    localStorage.setItem('medhamantra_gas_url', url);
+    showNotification('Settings saved successfully. Google Apps Script URL configured.', 'success');
+  } else {
+    localStorage.removeItem('medhamantra_gas_url');
+    showNotification('Settings saved. Using default Google Apps Script URL from code.', 'info');
+  }
+  checkGoogleScriptUrl();
+}
 
 function checkGoogleScriptUrl() {
   var warning = document.getElementById('configWarning');
@@ -2646,6 +2662,7 @@ function setupTabs() {
 function setupEventListeners() {
   // Settings
   document.getElementById('settingsToggle').addEventListener('click', toggleSettings);
+   document.getElementById('saveSettingsBtn').addEventListener('click', saveSettings);
   document.getElementById('closeSettingsBtn').addEventListener('click', toggleSettings);
   document.getElementById('configureNowBtn').addEventListener('click', toggleSettings);
 
