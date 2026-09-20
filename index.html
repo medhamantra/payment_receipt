@@ -1495,7 +1495,7 @@ const LOGO_URL = "./logo.jpeg";
 const COURSE_JSON_URL = "./data/courses.json";
 const COURSE_STORAGE_KEY = "medhamantra_courses";
 const RECEIPT_PREFIX = "MM";
-const DEFAULT_GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxaHzVBLuO66q745n2f9VLARnBd8GL0gYjMNvpGCFrL0j3WYdiv-OCgpZBjgyZNBIN6Iw/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxaHzVBLuO66q745n2f9VLARnBd8GL0gYjMNvpGCFrL0j3WYdiv-OCgpZBjgyZNBIN6Iw/exec";
 
 /* ============================================================
    GOOGLE SHEET COLUMN STRUCTURE
@@ -1613,7 +1613,7 @@ function formatDateForDisplay(dateStr) {
 }
 
 function getGoogleScriptUrl() {
-  return localStorage.getItem('medhamantra_gas_url') || DEFAULT_GOOGLE_SCRIPT_URL;
+  return localStorage.getItem('medhamantra_gas_url') || GOOGLE_SCRIPT_URL;
 }
 
 /* ============================================================
@@ -2399,7 +2399,7 @@ function collectFormData() {
 async function submitPaymentToGoogleSheets(payload) {
   var url = getGoogleScriptUrl();
 
-  if (!url || url === DEFAULT_GOOGLE_SCRIPT_URL || url.trim() === '') {
+  if (!url || url === GOOGLE_SCRIPT_URL || url.trim() === '') {
     showNotification('Google Apps Script URL is not configured. Payment data cannot be synced to Google Sheets until the Web App URL is added.', 'warning');
     return false;
   }
@@ -2614,13 +2614,13 @@ function toggleSettings() {
   panel.classList.toggle('open');
   if (panel.classList.contains('open')) {
     var url = getGoogleScriptUrl();
-    document.getElementById('gasUrlInput').value = (url === DEFAULT_GOOGLE_SCRIPT_URL) ? '' : url;
+    document.getElementById('gasUrlInput').value = (url === GOOGLE_SCRIPT_URL) ? '' : url;
   }
 }
 
 function saveSettings() {
   var url = document.getElementById('gasUrlInput').value.trim();
-  if (url && url !== DEFAULT_GOOGLE_SCRIPT_URL) {
+  if (url && url !== GOOGLE_SCRIPT_URL) {
     localStorage.setItem('medhamantra_gas_url', url);
     showNotification('Settings saved successfully. Google Apps Script URL configured.', 'success');
   } else {
@@ -2633,7 +2633,7 @@ function saveSettings() {
 function checkGoogleScriptUrl() {
   var url = getGoogleScriptUrl();
   var warning = document.getElementById('configWarning');
-  if (!url || url === DEFAULT_GOOGLE_SCRIPT_URL || url.trim() === '') {
+  if (!url || url === GOOGLE_SCRIPT_URL || url.trim() === '') {
     warning.style.display = 'block';
   } else {
     warning.style.display = 'none';
