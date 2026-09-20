@@ -992,40 +992,10 @@ a:hover { text-decoration: underline; }
 </style>
 </head>
 <body>
-<!-- ========================================================
-LOGIN
-     ======================================================== -->
-   <div id="loginScreen">
-  <div class="login-card">
-    <h1>MEDHAMANTRA</h1>
-    <p>Staff Login</p>
-
-    <input
-      type="text"
-      id="loginUserId"
-      placeholder="Staff ID"
-      autocomplete="off"
-    >
-
-    <input
-      type="password"
-      id="loginPassword"
-      placeholder="Password"
-      autocomplete="off"
-    >
-
-    <button id="loginBtn">
-      Login
-    </button>
-
-    <p id="loginError"></p>
-  </div>
-</div>
 
 <!-- ========================================================
      HEADER
      ======================================================== -->
-<div id="appContainer" style="display:none;">
 <header class="app-header">
   <div class="header-inner">
     <div class="brand">
@@ -1427,7 +1397,7 @@ LOGIN
           <!-- Footer -->
           <div class="receipt-footer">
             <p><strong>MEDHAMANTRA</strong> — Education Payment Receipt</p>
-            <p class="receipt-footer-sub">This is a computer-generated receipt by <span id="loggedInStaffId"></span></p>
+            <p class="receipt-footer-sub">This is a computer-generated receipt.</p>
           </div>
         </div>
       </div>
@@ -1515,7 +1485,7 @@ LOGIN
      NOTIFICATION CONTAINER
      ======================================================== -->
 <div class="notification-container" id="notificationContainer"></div>
-</div>
+
 <script>
 /* ============================================================
    CONFIGURATION
@@ -1524,7 +1494,6 @@ LOGIN
 const LOGO_URL = "./logo.jpeg";
 const COURSE_JSON_URL = "./data/courses.json";
 const COURSE_STORAGE_KEY = "medhamantra_courses";
-const STAFF_JSON_URL = "./data/staff.json";
 const RECEIPT_PREFIX = "MM";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxwkAjiA-TX_n_A2Mz5TQQqHgclClpj4U4K9G_8umKeaY4NEdBAKwdvvn4eOHTabj10JQ/exec";
 
@@ -2773,7 +2742,6 @@ function setupEventListeners() {
    ============================================================ */
 
 async function init() {
-    await loadStaffUsers();
   // Set default values
   setTodayDate();
   setDefaultYear();
@@ -2809,61 +2777,6 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
-   // STAFFLOAD FUNCTION
-   async function loadStaffUsers() {
-  try {
-    const response = await fetch(STAFF_JSON_URL, {
-      cache: "no-store"
-    });
-
-    if (!response.ok) {
-      throw new Error("Unable to load staff.json");
-    }
-
-    const data = await response.json();
-
-    if (!data || !Array.isArray(data.staff)) {
-      throw new Error("Invalid staff.json format");
-    }
-
-    staffUsers = data.staff;
-
-  } catch (error) {
-    console.error("Staff loading error:", error);
-    showLoginError("Staff login data could not be loaded.");
-  }
-}
-//LOGIN STAFF VERIFICATION
-   function loginStaff() {
-  const userId = document.getElementById("loginUserId").value.trim();
-  const password = document.getElementById("loginPassword").value;
-
-  const staff = staffUsers.find(function(user) {
-    return user.userId === userId &&
-           user.password === password;
-  });
-
-  if (!staff) {
-    showLoginError("Invalid Staff ID or Password.");
-    return;
-  }
-
-  loggedInStaff = staff;
-
-  document.getElementById("loginScreen").style.display = "none";
-  document.getElementById("appContainer").style.display = "block";
-
-  updateLoggedInStaff();
-  updateAuthorizedSignature();
-}
-function showLoginError(message) {
-  const error = document.getElementById("loginError");
-  error.textContent = message;
-}
-let loggedInStaff = null;
-sessionStorage.setItem(...)
-document.getElementById("loggedInStaffId").textContent = staff.id;
-
 </script>
 </body>
 </html>
