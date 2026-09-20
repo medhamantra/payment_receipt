@@ -1014,31 +1014,7 @@ a:hover { text-decoration: underline; }
 <!-- ========================================================
      SETTINGS PANEL
      ======================================================== -->
-<div class="settings-panel" id="settingsPanel">
-  <div class="settings-inner">
-    <h3>System Settings</h3>
-    <div class="form-group">
-      <label for="gasUrlInput">Google Apps Script Web App URL</label>
-      <input type="url" id="gasUrlInput" class="form-input"
-             placeholder="https://script.google.com/macros/s/XXXXXXXXXXXX/exec">
-      <p class="help-text">Enter the deployed Google Apps Script Web App URL to sync payments to Google Sheets. Leave empty to use the default URL from the code.</p>
-    </div>
-    <div class="settings-actions">
-      <button class="btn btn-primary" id="saveSettingsBtn">Save Settings</button>
-      <button class="btn btn-secondary" id="closeSettingsBtn">Close</button>
-    </div>
-    <div class="settings-help">
-      <h4>How to set up Google Sheets integration:</h4>
-      <ol>
-        <li>Create a Google Sheet with column headers (see code comments for exact columns).</li>
-        <li>Open Extensions → Apps Script in the Google Sheet.</li>
-        <li>Paste the <code>doPost</code> function (see code comments for reference).</li>
-        <li>Deploy → New Deployment → Web App. Execute as: <strong>Me</strong>. Access: <strong>Anyone</strong>.</li>
-        <li>Copy the Web App URL and paste it above, then click Save Settings.</li>
-      </ol>
-    </div>
-  </div>
-</div>
+
 
 <!-- ========================================================
      CONFIG WARNING
