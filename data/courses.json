@@ -1,25 +1,25 @@
 {
   "courses": [
     {
-      "courseName": "SSC CGL",
-      "duration": "12 Months",
-      "admissionFee": 1000,
-      "registrationFee": 500,
-      "monthlyFee": 800
+      "courseName": "Combined",
+      "duration": "8Months",
+      "admissionFee": 4500,
+      "registrationFee":000 ,
+      "monthlyFee": 600
     },
     {
       "courseName": "Banking",
-      "duration": "10 Months",
-      "admissionFee": 1000,
-      "registrationFee": 500,
-      "monthlyFee": 900
+      "duration": "6 Months",
+      "admissionFee": 2500,
+      "registrationFee": 000,
+      "monthlyFee": 600
     },
     {
-      "courseName": "UPSC CSE",
-      "duration": "12 Months",
-      "admissionFee": 2000,
-      "registrationFee": 1000,
-      "monthlyFee": 1500
+      "courseName": "WB Gram Panchayat special Batch ",
+      "duration": "6 Months",
+      "admissionFee": 2500,
+      "registrationFee":000,
+      "monthlyFee": 600
     },
     {
       "courseName": "Railways",
