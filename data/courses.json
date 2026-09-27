@@ -2,38 +2,66 @@
   "courses": [
     {
       "courseName": "Combined",
-      "duration": "8Months",
+      "duration": "12 Months(Platinum)",
+      "admissionFee": 6000,
+      "registrationFee": 100 ,
+      "monthlyFee": 600
+    },
+    {
+      "courseName": "Combined",
+      "duration": "6 Months(Gold)",
       "admissionFee": 4500,
       "registrationFee": 100 ,
       "monthlyFee": 600
     },
     {
       "courseName": "Banking",
-      "duration": "6 Months",
-      "admissionFee": 2500,
+      "duration": "6 Months(silver)",
+      "admissionFee": 3500,
+      "registrationFee": 100,
+      "monthlyFee": 600
+    },
+       {
+      "courseName": "SSC",
+      "duration": "6 Months(silver)",
+      "admissionFee": 3500,
       "registrationFee": 100,
       "monthlyFee": 600
     },
     {
       "courseName": "WB Gram Panchayat special Batch ",
-      "duration": "6 Months",
+      "duration": "3 Months(Bronze)",
+      "admissionFee": 2500,
+      "registrationFee":100,
+      "monthlyFee": 600
+    },
+      {
+      "courseName": "WB ICDS special Batch ",
+      "duration": "3 Months(Bronze)",
       "admissionFee": 2500,
       "registrationFee":100,
       "monthlyFee": 600
     },
     {
       "courseName": "Railways",
-      "duration": "8 Months",
-      "admissionFee": 800,
-      "registrationFee": 400,
+      "duration": "6 Months(silver)",
+      "admissionFee": 3500,
+      "registrationFee": 100,
       "monthlyFee": 600
     },
     {
-      "courseName": "State PSC",
-      "duration": "10 Months",
-      "admissionFee": 1200,
-      "registrationFee": 600,
-      "monthlyFee": 750
+      "courseName": "WB TET (Primary Level)",
+      "duration": "4 Months(Bronze)",
+      "admissionFee": 5500,
+      "registrationFee": 100,
+      "monthlyFee": 600
+    },
+    {
+      "courseName": "WB TET (Upper Primary Level",
+      "duration": "4 Months(Bronze)",
+      "admissionFee": 5500,
+      "registrationFee": 100,
+      "monthlyFee": 600
     },
     {
       "courseName": "CLAT",
