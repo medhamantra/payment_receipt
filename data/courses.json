@@ -1,15 +1,15 @@
 {
   "courses": [
     {
-      "courseName": "Combined",
-      "duration": "12 Months(Platinum)",
+      "courseName": "Combined(Platinum)",
+      "duration": "12 Months",
       "admissionFee": 6500,
       "registrationFee": 100 ,
       "monthlyFee": 600
     },
     {
-      "courseName": "Combined",
-      "duration": "6 Months(Gold)",
+      "courseName": "Combined(Gold)",
+      "duration": "6 Months",
       "admissionFee": 4500,
       "registrationFee": 100 ,
       "monthlyFee": 600
