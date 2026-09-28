@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MEDHAMANTRA — Education Payment Receipt System</title>
+<title>MEDHAMANTRA — Payment Receipt System</title>
 <style>
 /* ============================================================
    CSS VARIABLES & THEME
@@ -1265,7 +1265,7 @@ a:hover { text-decoration: underline; }
     <h1>MEDHAMANTRA</h1>
 
     <p class="login-subtitle">
-      Education Payment Receipt System
+      Payment Receipt System
     </p>
 
     <form id="loginForm">
@@ -1322,7 +1322,7 @@ a:hover { text-decoration: underline; }
       <div class="logo-fallback" id="logoFallback">MEDHA<br>MANTRA</div>
       <div class="brand-text">
         <h1>MEDHAMANTRA</h1>
-        <p>Education Payment Receipt System</p>
+        <p> Payment Receipt System</p>
       </div>
     </div>
       <button class="icon-btn" id="settingsToggle" aria-label="Open Settings" title="Settings">⚙</button>
@@ -1594,7 +1594,7 @@ a:hover { text-decoration: underline; }
             <div class="receipt-logo-fallback">MEDHA<br>MANTRA</div>
             <div class="receipt-header-text">
               <h2>MEDHAMANTRA</h2>
-              <p>Education Payment Receipt</p>
+              <p>Payment Receipt</p>
             </div>
           </div>
 
@@ -1763,7 +1763,7 @@ a:hover { text-decoration: underline; }
           <div class="receipt-footer">
 
   <p>
-    <strong>MEDHAMANTRA</strong> — Education Payment Receipt
+    <strong>MEDHAMANTRA</strong> — Payment Receipt
   </p>
 
   <p class="receipt-footer-sub">
@@ -3007,13 +3007,44 @@ function printReceipt() {
 }
 
 function saveAsPDF() {
+
+  // Make sure receipt preview is updated
   updateReceiptPreview();
-  showNotification('Use the browser\'s print dialog and select "Save as PDF" as the destination.', 'info');
+
+  // Get Receipt No and Student Name
+  var receiptNo = document.getElementById('receiptNo').value.trim();
+  var studentName = document.getElementById('studentName').value.trim();
+
+  // Clean filename characters
+  receiptNo = receiptNo.replace(/[\\/:*?"<>|]/g, '-');
+  studentName = studentName.replace(/[\\/:*?"<>|]/g, '-');
+
+  // Create PDF filename
+  var pdfFileName = 'MEDHAMANTRA_' + receiptNo + '_' + studentName;
+
+  // Save current browser title
+  var oldTitle = document.title;
+
+  // Browser uses document title as default PDF filename
+  document.title = pdfFileName;
+
+  showNotification(
+    'PDF filename: ' + pdfFileName + '.pdf',
+    'success'
+  );
+
+  // Small delay so title updates before print dialog
   setTimeout(function () {
+
     window.print();
+
+    // Restore title after print dialog closes
+    setTimeout(function () {
+      document.title = oldTitle;
+    }, 1000);
+
   }, 200);
 }
-
 /* ============================================================
    CLEAR FORM
    ============================================================ */
